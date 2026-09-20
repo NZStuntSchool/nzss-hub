@@ -3,112 +3,161 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0A08">
 <title>Upcoming workshops and training | NZ Stunt School</title>
 <meta name="description" content="NZ Stunt School workshops and training, October to December 2026. Tap a row to book.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Big+Shoulders+Display:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #EEF1F4;
-    --card: #F8F9FA;
-    --ink: #21252C;
-    --ink-soft: #4F5561;
-    --line: #D3D7DE;
+    --bg: #0A0A08;
+    --panel: #13100A;
+    --panel-line: #54461C;
+    --row: #1C1911;
+    --row-line: #3A3320;
+    --row-hover: #272212;
 
-    /* Soft palette */
-    --yellow: #F0D878;   /* Armed Action */
-    --yellow-tint: #FBF4D6;
+    --cream: #F3EFE4;
+    --cream-soft: #B9B29B;
+    --gold: #C9A227;       /* deep gold */
+    --gold-light: #E8C766; /* title gold */
+    --ink: #14120A;
+
+    /* Category colours (soft) */
+    --yellow: #F0D878;   /* Armed Action and firearms workshop */
     --blue: #8DB4DA;     /* Air Ram */
     --purple: #BCACDE;   /* Wires */
     --green: #94C7A6;    /* Open gym */
-    --grey: #D5D8DE;     /* Private hire */
+    --grey: #8F8B7C;     /* Private hire */
 
-    --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+    --wide: "Archivo", Verdana, "DejaVu Sans", sans-serif;
     --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); }
   body {
     margin: 0;
-    background: var(--paper);
-    color: var(--ink);
+    background:
+      radial-gradient(ellipse 680px 560px at 50% 340px, rgba(52, 43, 16, .95), rgba(52, 43, 16, 0) 72%),
+      var(--bg);
+    background-repeat: no-repeat;
+    color: var(--cream);
     font-family: var(--body);
     font-size: 16px;
     line-height: 1.5;
   }
   a { color: inherit; }
-  a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 56px; }
+  a:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+
+  .wrap { position: relative; max-width: 760px; margin: 0 auto; padding: 0 22px 72px; }
+
+  /* Corner brackets */
+  .corner { position: absolute; width: 26px; height: 26px; border: 0 solid #BE9623; pointer-events: none; }
+  .corner.tl { top: 14px; left: 14px; border-top-width: 3px; border-left-width: 3px; }
+  .corner.tr { top: 14px; right: 14px; border-top-width: 3px; border-right-width: 3px; }
+  .corner.bl { bottom: 14px; left: 14px; border-bottom-width: 3px; border-left-width: 3px; }
+  .corner.br { bottom: 14px; right: 14px; border-bottom-width: 3px; border-right-width: 3px; }
 
   /* Header */
-  .masthead { padding: 40px 0 24px; }
-  .masthead .org { font-weight: 700; font-size: 15px; color: var(--ink-soft); margin: 0 0 6px; }
-  .masthead h1 {
-    font-family: var(--display);
-    font-weight: 900;
-    font-size: clamp(44px, 12.5vw, 104px);
-    overflow-wrap: break-word;
-    line-height: .88;
-    letter-spacing: -.005em;
+  .masthead { text-align: center; padding: 56px 0 30px; }
+  .logo { width: 94px; height: 94px; display: block; margin: 0 auto 22px; }
+  .eyebrow {
+    font-family: var(--wide);
+    font-stretch: 125%;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: .34em;
     text-transform: uppercase;
-    margin: 0 0 14px;
+    color: var(--gold);
+    margin: 0 0 12px;
+    padding-left: .34em;
   }
-  .masthead .sub { margin: 0; font-size: 17px; color: var(--ink-soft); max-width: 46ch; }
+  .masthead h1 {
+    font-family: var(--wide);
+    font-stretch: 125%;
+    font-weight: 900;
+    font-size: clamp(30px, 9vw, 76px);
+    line-height: 1.02;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin: 0;
+  }
+  .rule {
+    width: 150px; height: 2px; margin: 22px auto 18px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .months {
+    font-family: var(--wide);
+    font-stretch: 112%;
+    font-weight: 400;
+    font-size: clamp(15px, 4.2vw, 24px);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin: 0 0 14px;
+    padding-left: .22em;
+  }
+  .masthead .sub { margin: 0 auto; font-size: 16px; color: var(--cream-soft); max-width: 40ch; }
 
   /* Firearms and tactical workshop (this Saturday) */
   .feature {
-    background: var(--yellow);
-    border-radius: 6px;
+    background: linear-gradient(180deg, #F3DC84, #E2BE52);
+    color: var(--ink);
+    border-radius: 8px;
     overflow: hidden;
-    margin: 8px 0 28px;
+    margin: 6px 0 24px;
   }
   .feature .tape {
     height: 14px;
-    background: repeating-linear-gradient(-45deg, #5A606B 0 14px, var(--yellow) 14px 28px);
+    background: repeating-linear-gradient(-45deg, var(--ink) 0 14px, #F0D878 14px 28px);
   }
-  .feature .body { padding: 22px 20px 24px; }
+  .feature .body { padding: 22px 20px 24px; text-align: center; }
   .feature .when {
-    font-family: var(--display);
+    font-family: var(--wide);
+    font-stretch: 125%;
     font-weight: 900;
-    font-size: clamp(44px, 12vw, 72px);
-    line-height: .9;
+    font-size: clamp(26px, 8vw, 48px);
+    line-height: 1;
+    letter-spacing: .05em;
     text-transform: uppercase;
-    margin: 0 0 6px;
+    margin: 0 0 10px;
   }
-  .feature h2 { font-size: 20px; line-height: 1.25; margin: 0 0 14px; font-weight: 700; }
-  .feature .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px; }
-  .price-big { font-family: var(--display); font-weight: 900; font-size: 40px; line-height: 1; }
+  .feature h2 { font-size: 19px; line-height: 1.25; margin: 0 0 16px; font-weight: 700; }
+  .feature .meta { display: flex; flex-wrap: wrap; gap: 10px 14px; justify-content: center; align-items: center; margin-bottom: 18px; }
+  .price-big { font-family: var(--wide); font-stretch: 125%; font-weight: 900; font-size: 34px; line-height: 1; }
   .spots {
     background: var(--ink);
-    color: #fff;
+    color: var(--gold-light);
     font-weight: 700;
     font-size: 14px;
-    padding: 5px 12px;
+    padding: 5px 14px;
     border-radius: 999px;
   }
   .btn {
     display: block;
     text-align: center;
     background: var(--ink);
-    color: #fff;
+    color: var(--cream);
     text-decoration: none;
     font-weight: 700;
     font-size: 17px;
     padding: 14px 18px;
     border-radius: 6px;
   }
-  .btn:hover { background: #363C46; }
+  .btn:hover { background: #2A2412; }
+  .feature .btn:focus-visible { outline-color: var(--ink); }
 
   /* Session sections */
   .block {
-    background: var(--card);
-    border-radius: 6px;
-    padding: 22px 18px 20px;
+    background: var(--panel);
+    border: 2px solid var(--panel-line);
+    border-radius: 8px;
+    padding: 16px 16px 18px;
     margin-bottom: 20px;
-    border-top: 10px solid var(--accent);
     scroll-margin-top: 16px;
   }
   .block.armed { --accent: var(--yellow); }
@@ -116,49 +165,65 @@
   .block.wires { --accent: var(--purple); }
   .block.open  { --accent: var(--green); }
   .block.hire  { --accent: var(--grey); }
+
   .block h2 {
-    font-family: var(--display);
-    font-weight: 900;
-    font-size: clamp(34px, 9vw, 48px);
-    line-height: .95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 56px;
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 82%, #fff), var(--accent));
+    color: var(--ink);
+    border-radius: 8px;
+    font-family: var(--wide);
+    font-stretch: 125%;
+    font-weight: 800;
+    font-size: clamp(13px, 3.9vw, 19px);
+    line-height: 1.25;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    margin: 0 0 8px;
   }
-  .block .lead { margin: 0 0 16px; color: var(--ink-soft); font-size: 15px; }
+  .block .lead { margin: 0 0 16px; color: var(--cream-soft); font-size: 15px; }
   .date-head {
     display: inline-block;
-    font-family: var(--display);
-    font-weight: 900;
-    font-size: 30px;
+    font-family: var(--wide);
+    font-stretch: 112%;
+    font-weight: 800;
+    font-size: 20px;
     line-height: 1;
-    margin: 22px 0 10px;
-    padding-bottom: 4px;
-    border-bottom: 5px solid var(--accent);
+    letter-spacing: .04em;
+    color: var(--cream);
+    margin: 20px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 4px solid var(--accent);
   }
-  .date-head:first-of-type { margin-top: 6px; }
+  .date-head:first-of-type { margin-top: 4px; }
   .rows { display: grid; gap: 8px; }
   .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    min-height: 52px;
+    min-height: 54px;
     padding: 10px 14px;
-    background: #fff;
-    border: 1px solid var(--line);
+    background: var(--row);
+    border: 1px solid var(--row-line);
     border-left: 8px solid var(--accent);
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
+    color: var(--cream);
   }
-  .row:hover { background: #F3F5F8; }
-  .row .name small { display: block; font-weight: 400; font-size: 13px; color: var(--ink-soft); }
+  .row:hover { background: var(--row-hover); }
+  .row .name small { display: block; font-weight: 400; font-size: 13px; color: var(--cream-soft); }
   .row .price {
     background: var(--accent);
     color: var(--ink);
     font-weight: 700;
     font-size: 16px;
-    padding: 5px 12px;
+    padding: 5px 13px;
     border-radius: 999px;
     white-space: nowrap;
   }
@@ -166,23 +231,24 @@
   .bundle {
     margin-top: 16px;
     padding: 14px 16px;
-    background: var(--yellow-tint);
-    border: 1px solid #E6D48A;
+    background: #1F1B0E;
+    border: 1px solid #6B5A22;
     border-radius: 6px;
     font-size: 15px;
+    color: var(--cream);
   }
-  .bundle strong { font-size: 17px; }
-  .facts { margin: 0 0 8px; padding-left: 20px; font-size: 15px; }
+  .bundle strong { font-size: 17px; color: var(--gold-light); }
+  .facts { margin: 0 0 4px; padding-left: 20px; font-size: 15px; }
   .facts li { margin-bottom: 4px; }
 
-  footer { margin-top: 36px; font-size: 15px; color: var(--ink-soft); }
+  footer { margin-top: 34px; text-align: center; font-size: 15px; color: var(--cream-soft); }
   footer p { margin: 0 0 6px; }
-  footer a { font-weight: 700; color: var(--ink); }
+  footer a { font-weight: 700; color: var(--gold-light); }
 
   @media (min-width: 640px) {
-    .block { padding: 26px 26px 24px; }
+    .block { padding: 20px 24px 22px; }
     .feature .body { padding: 26px 28px 28px; }
-    .btn { display: inline-block; padding: 14px 34px; }
+    .btn { display: inline-block; padding: 14px 40px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -191,11 +257,18 @@
 </head>
 <body>
 <div class="wrap">
+  <span class="corner tl" aria-hidden="true"></span>
+  <span class="corner tr" aria-hidden="true"></span>
+  <span class="corner bl" aria-hidden="true"></span>
+  <span class="corner br" aria-hidden="true"></span>
 
   <header class="masthead">
-    <p class="org">NZ Stunt School</p>
+    <img class="logo" src="data:image/png;base64,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" width="94" height="94" alt="NZ Stunt School">
+    <p class="eyebrow">NZ Stunt School</p>
     <h1>Upcoming workshops and training</h1>
-    <p class="sub">October to December 2026. Tap any row to open its booking page with full details and pricing.</p>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="months">Oct · Nov · Dec 2026</p>
+    <p class="sub">Tap any row to open its booking page with full details and pricing.</p>
   </header>
 
   <!-- This Saturday -->
