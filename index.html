@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upcoming workshops and training | NZ Stunt School</title>
+<meta name="description" content="NZ Stunt School workshops and training, October to December 2026. Tap a row to book.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Big+Shoulders+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF1F4;
+    --card: #F8F9FA;
+    --ink: #21252C;
+    --ink-soft: #4F5561;
+    --line: #D3D7DE;
+
+    /* Soft palette */
+    --yellow: #F0D878;   /* Armed Action */
+    --yellow-tint: #FBF4D6;
+    --blue: #8DB4DA;     /* Air Ram */
+    --purple: #BCACDE;   /* Wires */
+    --green: #94C7A6;    /* Open gym */
+    --grey: #D5D8DE;     /* Private hire */
+
+    --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+    --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 56px; }
+
+  /* Header */
+  .masthead { padding: 40px 0 24px; }
+  .masthead .org { font-weight: 700; font-size: 15px; color: var(--ink-soft); margin: 0 0 6px; }
+  .masthead h1 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(44px, 12.5vw, 104px);
+    overflow-wrap: break-word;
+    line-height: .88;
+    letter-spacing: -.005em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .masthead .sub { margin: 0; font-size: 17px; color: var(--ink-soft); max-width: 46ch; }
+
+  /* Firearms and tactical workshop (this Saturday) */
+  .feature {
+    background: var(--yellow);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px 0 28px;
+  }
+  .feature .tape {
+    height: 14px;
+    background: repeating-linear-gradient(-45deg, #5A606B 0 14px, var(--yellow) 14px 28px);
+  }
+  .feature .body { padding: 22px 20px 24px; }
+  .feature .when {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(44px, 12vw, 72px);
+    line-height: .9;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  .feature h2 { font-size: 20px; line-height: 1.25; margin: 0 0 14px; font-weight: 700; }
+  .feature .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px; }
+  .price-big { font-family: var(--display); font-weight: 900; font-size: 40px; line-height: 1; }
+  .spots {
+    background: var(--ink);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .btn {
+    display: block;
+    text-align: center;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 14px 18px;
+    border-radius: 6px;
+  }
+  .btn:hover { background: #363C46; }
+
+  /* Session sections */
+  .block {
+    background: var(--card);
+    border-radius: 6px;
+    padding: 22px 18px 20px;
+    margin-bottom: 20px;
+    border-top: 10px solid var(--accent);
+    scroll-margin-top: 16px;
+  }
+  .block.armed { --accent: var(--yellow); }
+  .block.air   { --accent: var(--blue); }
+  .block.wires { --accent: var(--purple); }
+  .block.open  { --accent: var(--green); }
+  .block.hire  { --accent: var(--grey); }
+  .block h2 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(34px, 9vw, 48px);
+    line-height: .95;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+  }
+  .block .lead { margin: 0 0 16px; color: var(--ink-soft); font-size: 15px; }
+  .date-head {
+    display: inline-block;
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1;
+    margin: 22px 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 5px solid var(--accent);
+  }
+  .date-head:first-of-type { margin-top: 6px; }
+  .rows { display: grid; gap: 8px; }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 8px solid var(--accent);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .row:hover { background: #F3F5F8; }
+  .row .name small { display: block; font-weight: 400; font-size: 13px; color: var(--ink-soft); }
+  .row .price {
+    background: var(--accent);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .bundle {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--yellow-tint);
+    border: 1px solid #E6D48A;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  .bundle strong { font-size: 17px; }
+  .facts { margin: 0 0 8px; padding-left: 20px; font-size: 15px; }
+  .facts li { margin-bottom: 4px; }
+
+  footer { margin-top: 36px; font-size: 15px; color: var(--ink-soft); }
+  footer p { margin: 0 0 6px; }
+  footer a { font-weight: 700; color: var(--ink); }
+
+  @media (min-width: 640px) {
+    .block { padding: 26px 26px 24px; }
+    .feature .body { padding: 26px 28px 28px; }
+    .btn { display: inline-block; padding: 14px 34px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="org">NZ Stunt School</p>
+    <h1>Upcoming workshops and training</h1>
+    <p class="sub">October to December 2026. Tap any row to open its booking page with full details and pricing.</p>
+  </header>
+
+  <!-- This Saturday -->
+  <section class="feature" aria-labelledby="tactical-title">
+    <div class="tape" aria-hidden="true"></div>
+    <div class="body">
+      <p class="when">Sat 26 Sep</p>
+      <h2 id="tactical-title">Firearms safety and tactical workshop</h2>
+      <div class="meta">
+        <span class="price-big">$400</span>
+        <span class="spots">Only 3 spots left</span>
+      </div>
+      <a class="btn" href="https://www.nzstuntschool.com/en/event/firearms-safety-tactical-workshop-sept-2026/6735/" target="_blank" rel="noopener">Book the workshop</a>
+    </div>
+  </section>
+
+  <!-- Armed Action -->
+  <section class="block armed" id="armed" aria-labelledby="armed-title">
+    <h2 id="armed-title">Armed Action training block</h2>
+    <p class="lead">Monthly training, $60 per session.</p>
+    <div class="rows">
+      <a class="row" href="https://www.nzstuntschool.com/en/event/armed-action-1-skills-drills-monthly-training-october-2026/7294/" target="_blank" rel="noopener">
+        <span class="name">Sun 11 Oct<small>Skills and techniques</small></span><span class="price">$60</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/armed-action-camera-choreo-monthly-training-nov-2026/7295/" target="_blank" rel="noopener">
+        <span class="name">Sun 8 Nov<small>Camera and choreography</small></span><span class="price">$60</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/armed-action-scenario-day-monthly-training-dec-2026/7297/" target="_blank" rel="noopener">
+        <span class="name">Sun 13 Dec<small>Scenario day</small></span><span class="price">$60</span>
+      </a>
+    </div>
+    <div class="bundle">
+      <strong>Book all three for $150 (save $30).</strong><br>
+      When you book your first session, you can add the bundle at checkout.
+    </div>
+  </section>
+
+  <!-- Air Ram -->
+  <section class="block air" id="air" aria-labelledby="air-title">
+    <h2 id="air-title">Air Ram workshop and training</h2>
+    <p class="lead">Beginner workshops $300, training $60.</p>
+
+    <div class="date-head">Sat 17 Oct</div>
+    <div class="rows">
+      <a class="row" href="https://www.nzstuntschool.com/en/event/air-ram-beginner-workshop-oct-2026/7301/" target="_blank" rel="noopener">
+        <span class="name">Beginner workshop</span><span class="price">$300</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/air-ram-training-oct-2026/7303/" target="_blank" rel="noopener">
+        <span class="name">Training</span><span class="price">$60</span>
+      </a>
+    </div>
+
+    <div class="date-head">Sun 22 Nov</div>
+    <div class="rows">
+      <a class="row" href="https://www.nzstuntschool.com/en/event/air-ram-beginner-workshop-nov-2026/7302/" target="_blank" rel="noopener">
+        <span class="name">Beginner workshop</span><span class="price">$300</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/air-ram-training-nov-2026/7304/" target="_blank" rel="noopener">
+        <span class="name">Training</span><span class="price">$60</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Wires -->
+  <section class="block wires" id="wires" aria-labelledby="wires-title">
+    <h2 id="wires-title">Wires workshop and training</h2>
+    <p class="lead">Level 1, Level 2 and Advanced. Workshops $600, training $250.</p>
+
+    <div class="date-head">Sat 24 Oct</div>
+    <div class="rows">
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-1-workshop-oct-2026/7306/" target="_blank" rel="noopener">
+        <span class="name">Level 1 workshop</span><span class="price">$600</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-1-training-oct-2026/7311/" target="_blank" rel="noopener">
+        <span class="name">Level 1 training</span><span class="price">$250</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-2-workshop-oct-2026/7313/" target="_blank" rel="noopener">
+        <span class="name">Level 2 workshop</span><span class="price">$600</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-2-training-oct-2026/7314/" target="_blank" rel="noopener">
+        <span class="name">Level 2 training</span><span class="price">$250</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-advanced-training-oct-2026/7315/" target="_blank" rel="noopener">
+        <span class="name">Advanced training</span><span class="price">$250</span>
+      </a>
+    </div>
+
+    <div class="date-head">Sun 6 Dec</div>
+    <div class="rows">
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-1-workshop-dec-2026/7307/" target="_blank" rel="noopener">
+        <span class="name">Level 1 workshop</span><span class="price">$600</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-1-training-dec-2026/7312/" target="_blank" rel="noopener">
+        <span class="name">Level 1 training</span><span class="price">$250</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-2-workshop-dec-2026/7316/" target="_blank" rel="noopener">
+        <span class="name">Level 2 workshop</span><span class="price">$600</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-level-2-training-dec-2026/7318/" target="_blank" rel="noopener">
+        <span class="name">Level 2 training</span><span class="price">$250</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/wires-advanced-training-dec-2026/7317/" target="_blank" rel="noopener">
+        <span class="name">Advanced training</span><span class="price">$250</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Open gym -->
+  <section class="block open" id="open-gym" aria-labelledby="open-title">
+    <h2 id="open-title">Stunt open gym, now at Hunua</h2>
+    <p class="lead">$25 to train all Sunday afternoon in the NZSS Stunt Hub. Access to weapons, mats, mini trampoline, boxing gear, gym equipment and more.</p>
+    <div class="rows">
+      <a class="row" href="https://www.nzstuntschool.com/en/event/open-stunt-gym-oct-2026/4016/" target="_blank" rel="noopener">
+        <span class="name">Sun 4 Oct</span><span class="price">$25</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/open-stunt-gym-nov-2026/4017/" target="_blank" rel="noopener">
+        <span class="name">Sun 1 Nov</span><span class="price">$25</span>
+      </a>
+      <a class="row" href="https://www.nzstuntschool.com/en/event/open-stunt-gym-dec-2026/4018/" target="_blank" rel="noopener">
+        <span class="name">Sun 29 Nov</span><span class="price">$25</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Private hire -->
+  <section class="block hire" id="hire" aria-labelledby="hire-title">
+    <h2 id="hire-title">Private stunt gym hire</h2>
+    <p class="lead">The Stunt Hub is available for private hire, full or half day. Any Saturday or Sunday without a session is free. Weekdays are available on request.</p>
+    <ul class="facts">
+      <li>Gather a team of 4 performers minimum</li>
+      <li>Your own private training space</li>
+      <li>Message us on Telegram to learn more about availability and conditions</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Any questions or requests, feel free to reach out.</p>
+    <p><a href="https://www.nzstuntschool.com/" target="_blank" rel="noopener">nzstuntschool.com</a></p>
+  </footer>
+</div>
+</body>
+</html>
